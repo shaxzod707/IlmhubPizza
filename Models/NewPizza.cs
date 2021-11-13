@@ -29,10 +29,9 @@ namespace IlmhubPizza.Models
         [MaxLength(1000)]
         public double Price { get; set; }
 
-        
-        public NewPizza(Guid id, string title, string shortName, EPizzaStockStatusingModel stockStatus, string ingredients, double price)
+        public NewPizza(string title, string shortName, EPizzaStockStatusingModel stockStatus, string ingredients, double price)
         {
-            Id = id;
+            Id = Guid.NewGuid();
             Title = title;
             ShortName = shortName;
             StockStatus = stockStatus;
