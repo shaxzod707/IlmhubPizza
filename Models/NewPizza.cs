@@ -2,9 +2,9 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace IlmhubPizza.Entities
+namespace IlmhubPizza.Models
 {
-    public class Pizza
+    public class NewPizza
     {
 
         [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
@@ -18,7 +18,7 @@ namespace IlmhubPizza.Entities
         [MaxLength(3)]
         public string ShortName { get; set; }
 
-        public EPizzaStockStatusing? StockStatus { get; set; }
+        public EPizzaStockStatusingModel StockStatus { get; set; }
 
         [Required]
         [MaxLength(1024)]
@@ -29,8 +29,8 @@ namespace IlmhubPizza.Entities
         [MaxLength(1000)]
         public double Price { get; set; }
 
-
-        public Pizza(Guid id, string title, string shortName, EPizzaStockStatusing? stockStatus, string ingredients, double price)
+        
+        public NewPizza(Guid id, string title, string shortName, EPizzaStockStatusingModel stockStatus, string ingredients, double price)
         {
             Id = id;
             Title = title;

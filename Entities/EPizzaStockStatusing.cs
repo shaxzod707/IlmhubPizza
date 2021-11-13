@@ -1,6 +1,6 @@
 namespace IlmhubPizza.Entities
 {
-    public enum strEPizzaStockStatusing
+    public enum EPizzaStockStatusing
     {
         In,
         Out
